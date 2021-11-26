@@ -2,6 +2,7 @@ const quoteContainer = document.getElementById('quote-container');
 const quoteText = document.getElementById('quote');
 const authorText = document.getElementById('author');
 const twitterBtn = document.getElementById('twitter');
+const facebookBtn = document.getElementById('facebook');
 const newQuoteBtn = document.getElementById('new-quote');
 const loader = document.getElementById('loader');
 
@@ -14,11 +15,10 @@ let apiQuotes = [];
 
 
  function removeLoadingSpinner(){
-     if (!loader.hidden){
      quoteContainer.hidden = false;
      loader.hidden = true;
  }
- }
+
 
 
 //Show New Quote
@@ -69,10 +69,18 @@ function tweetQuote(){
 }
 
 
+function FacebookQuote(){
+    const FacebookUrl = `http://www.facebook.com/sharer/sharer.php?s=100&p[url]=" + encodeURI(fburl) + "&p[images][0]=" + encodeURI(fbimgurl) + "&p[title]=" + encodeURI(fbtitle) + "&p[summary]=" + encodeURI(fbsummary)=${quoteText.textContent} - ${authorText.textContent}`;
+    window.open(FacebookUrl, '_blank');  //open a new twitter window to open in new tab
+}
+
+
 //Event Listeners
 
 newQuoteBtn.addEventListener('click', newQuote);
 twitterBtn.addEventListener('click', tweetQuote);
+facebookBtn.addEventListener('click', FacebookQuote);
+
 
 //On Load 
 getQuotes();

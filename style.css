@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display=swap');
 
 html {
   box-sizing: border-box;
@@ -11,20 +11,12 @@ body {
   background-image: url('imgs/mountains.jpg');
   background-size: cover;
   color: #000;
-  font-family: Nanum, sans-serif;
-  font-weight: 700;
+  font-family: 'Sunflower', sans-serif;
+
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-
-#google_translate_element{
-  position: absolute;
-  top: 2rem;
-  border: none;
-  border-radius: 15%;
 }
 
 
@@ -62,8 +54,9 @@ body {
 .button-container{
   margin-top: 15px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
+
 
 button{
     cursor: pointer;
@@ -74,7 +67,7 @@ button{
     color: #fff;
     background-color: rgb(10, 56, 77);
     outline: none;
-    padding: 0.5rem 1.8rem;
+    padding: 0.5rem 1rem;
     box-shadow: 0 0.3rem rgba(121, 121, 121, 0.65);
 }
 
@@ -91,16 +84,25 @@ button:active{
   color: #2288cc
 }
 
+.facebook-button:hover{
+  color: #32349b
+}
+
+
 
 .fa-twitter{
+  font-size: 1.5rem;
+}
+
+.fa-facebook{
   font-size: 1.5rem;
 }
 
 /* Loader  */
 
 .loader {
-  border: 16px solid #f3f3f3; 
-  border-top: 16px solid rgb(110, 107, 119);
+  border: 10px solid #5e5b5b; 
+  border-top: 10px solid rgb(3, 3, 3);
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -111,8 +113,6 @@ button:active{
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 } 
-
-
 
 
 /* Media Query: Tablet or Smaller */
@@ -127,6 +127,14 @@ button:active{
   }
 }
   
+#google_translate_element{
+  position: absolute;
+  top: 2rem;
+  border: none;
+  border-radius: 15%;
+}
+
+
 
 
 /* ("data:image/svg+xml,%3Csvg width='84' height='48' viewBox='0 0 84 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h12v6H0V0zm28 8h12v6H28V8zm14-8h12v6H42V0zm14 0h12v6H56V0zm0 8h12v6H56V8zM42 8h12v6H42V8zm0 16h12v6H42v-6zm14-8h12v6H56v-6zm14 0h12v6H70v-6zm0-16h12v6H70V0zM28 32h12v6H28v-6zM14 16h12v6H14v-6zM0 24h12v6H0v-6zm0 8h12v6H0v-6zm14 0h12v6H14v-6zm14 8h12v6H28v-6zm-14 0h12v6H14v-6zm28 0h12v6H42v-6zm14-8h12v6H56v-6zm0-8h12v6H56v-6zm14 8h12v6H70v-6zm0 8h12v6H70v-6zM14 24h12v6H14v-6zm14-8h12v6H28v-6zM14 8h12v6H14V8zM0 8h12v6H0V8z' fill='%2345d4d9' fill-opacity='0.79' fill-rule='evenodd'/%3E%3C/svg%3E"); */
