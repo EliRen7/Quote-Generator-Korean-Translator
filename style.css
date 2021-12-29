@@ -12,7 +12,7 @@ body {
   background-size: cover;
   color: #000;
   font-family: 'Sunflower', sans-serif;
-
+  background-attachment: fixed;
   text-align: center;
   display: flex;
   align-items: center;
