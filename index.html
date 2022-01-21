@@ -3,20 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>Quote Generator + Korean Translator</title>
     <link rel="icon" type="image/png" href="imgs/favicon.ico">
-    
-    <!-- Old Favicon - Grab Icon From Google (Might be unsupported in the future) -->
-    <!-- <link rel="icon" type="image/png" href="https://s2.googleusercontent.com/s2/favicons?domain=jacinto.design"> -->
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Translator button --> 
-    <div id="google_translate_element"></div> 
+
+
+    <!-- Translator button -->
+    <div id="google_translate_element"></div>
 
     <div class="quote-container" id="quote-container">
         <!-- Quote -->
@@ -28,6 +26,7 @@
         <div class="quote-author">
             <span id="author"></span>
         </div>
+        <div id="google_translate_element"></div>
         <!-- Buttons -->
         <div class="button-container">
             <button class="twitter-button" id="twitter" title="Tweet This!">
@@ -36,29 +35,31 @@
             <button class="facebook-button" id="facebook" title="Post This!">
                 <i class="fab fa-facebook"></i>
             </button>
+               <!-- Translator button -->
+
             <button id="new-quote">New Quote</button>
         </div>
     </div>
 
         <!-- Loader -->
        <div class="loader" id="loader"></div>
-    
+
 
 <!-- scripts -->
 <script>
     function googleTranslateElementInit() {
         new google.translate.TranslateElement(
             {pageLanguage: 'en', includedLanguages: 'en,ko'},
-            'google_translate_element'
+            'google_translate_element',
+ 
         );
     }
 </script>
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
 
-
-
-<!--  includedLanguages: 'es', -->
-<!-- autoDisplay: 'true', layout: google.translate.TranslateElement.InlineLayout.SIMPLE -->
+<!-- 
+ includedLanguages: 'es',
+autoDisplay: 'true', layout: google.translate.TranslateElement.InlineLayout.SIMPLE  -->
