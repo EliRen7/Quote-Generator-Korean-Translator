@@ -70,7 +70,7 @@ function tweetQuote(){
 
 
 function FacebookQuote(){
-    const FacebookUrl = `http://www.facebook.com/sharer/sharer.php?s=100&p[url]=" + encodeURI(fburl) + "&p[images][0]=" + encodeURI(fbimgurl) + "&p[title]=" + encodeURI(fbtitle) + "&p[summary]=" + encodeURI(fbsummary)=${quoteText.textContent} - ${authorText.textContent}`;
+    const FacebookUrl = `http://www.facebook.com/sharer/sharer.php?s=100&p[url]=${encodeURIComponent(window.location.href)}&p[title]=${encodeURIComponent('Check out this quote!')}&p[summary]=${encodeURIComponent(`${quoteText.textContent} - ${authorText.textContent}`)}`;
     window.open(FacebookUrl, '_blank');  //open a new twitter window to open in new tab
 }
 
